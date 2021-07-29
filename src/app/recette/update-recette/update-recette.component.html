@@ -1,0 +1,50 @@
+<p>**** vous etes sur de modifier ces informations? **** </p>
+<!--<form #updateRecetteForm="ngForm">-->
+<div class="form-group">
+  <h2 class="bg-light mb-2">Update Recette</h2>
+  <form (submit)="updateRecette(updateRecetteForm)" #updateRecetteForm="ngForm" >
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Recette id</label>
+        <input type="number" class="form-control"   [(ngModel)]="recetteDetails.id" required name="id" ngModel>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Recette libelle</label>
+        <input type="text" class="form-control"   [(ngModel)]="recetteDetails.libelle" required name="libelle" ngModel>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 mb-3">
+      <label>Description</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.description" required name="description" ngModel>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label>ing1</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.ing1" required name="ing1" ngModel>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>ing2</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.ing2" required name="ing2" ngModel>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>ing3</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.ing3" required name="ing3" ngModel>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>ing4</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.ing4" required name="ing4" ngModel>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>ing5</label>
+      <input type="text" class="form-control"  [(ngModel)]="recetteDetails.ing5" required name="ing5" ngModel>
+    </div>
+
+
+
+    <button class="btn btn-primary" type="submit" (click)="updateRecette(updateRecetteForm.value)">Update Recette</button>
+  </form>
+</div>

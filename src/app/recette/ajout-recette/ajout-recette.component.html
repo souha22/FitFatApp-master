@@ -1,0 +1,52 @@
+<p>**** Vous pouvez ajouter une recette içi !! ****</p>
+<div class="container">
+  <h2 class="text-center">Add Recette's </h2>
+  <form #Recette="ngForm" [formGroup]="addForm" (ngSubmit)="onSubmit(Recette.value)">
+
+    <div class="form-group">
+      <label for="nom">Libellé :</label>
+      <input type="text" formControlName="libelle" placeholder="libelle" name="libelle" class="form-control" id="libelle">
+    </div>
+
+    <div class="form-group">
+      <label for="description">description:</label>
+      <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="adresse">Ingrédient 1</label>
+      <input type="text" formControlName="ing1" placeholder="ing1" name="ing1" class="form-control" id="ing1">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Ingrédient 2</label>
+      <input type="text" formControlName="ing2" placeholder="ing2" name="ing2" class="form-control" id="ing2">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Ingrédient 3</label>
+      <input type="text" formControlName="ing3" placeholder="ing3" name="ing3" class="form-control" id="ing3">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Ingrédient 4</label>
+      <input type="text" formControlName="ing4" placeholder="ing4" name="ing4" class="form-control" id="ing4">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Ingrédient 5</label>
+      <input type="text" formControlName="ing5" placeholder="ing5" name="ing5" class="form-control" id="ing5">
+    </div>
+
+
+    <form [formGroup]="uploadForm"  class="was-validated">
+      <div class="mb-3">
+        <label  class="form-label">Image du Recette</label>
+
+        <input type="file" class="form-control" aria-label="file example" name ="image" (change)="onFileSelected($event)" #fileUpload>
+
+
+      </div>
+    </form>
+
+
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>

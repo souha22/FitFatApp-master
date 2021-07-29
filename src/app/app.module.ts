@@ -69,6 +69,10 @@ import { UpdatePlateComponent } from "./plates/update-plate/update-plate.compone
 import { AdminPlatesListComponent } from "./admin/admin-plates-list/admin-plates-list.component";
 import { ResponsableComponent } from './responsable/responsable.component';
 import { ShowAllRecetteComponent } from './recette/show-all-recette/show-all-recette.component';
+import { AjoutRecetteComponent } from './recette/ajout-recette/ajout-recette.component';
+import { DeleteRecetteComponent } from './recette/delete-recette/delete-recette.component';
+import { UpdateRecetteComponent } from './recette/update-recette/update-recette.component';
+import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 
 
 @NgModule({
@@ -116,7 +120,11 @@ import { ShowAllRecetteComponent } from './recette/show-all-recette/show-all-rec
     AdminPlatesListComponent,
     ResponsableComponent,
   ShoppingCartComponent,
-  ShowAllRecetteComponent
+  ShowAllRecetteComponent,
+  AjoutRecetteComponent,
+  DeleteRecetteComponent,
+  UpdateRecetteComponent,
+  ShowRecetteComponent
     ],
 
 

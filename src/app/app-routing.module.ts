@@ -51,6 +51,10 @@ import {AdminPlatesListComponent} from "./admin/admin-plates-list/admin-plates-l
 import {ResponsableComponent} from "./responsable/responsable.component";
 import {ShowAllRecetteComponent} from "./recette/show-all-recette/show-all-recette.component";
 import {AdminRecetteListeComponent} from "./admin/admin-recette-liste/admin-recette-liste.component";
+import {AjoutRecetteComponent} from "./recette/ajout-recette/ajout-recette.component";
+import {DeleteRecetteComponent} from "./recette/delete-recette/delete-recette.component";
+import {UpdateRecetteComponent} from "./recette/update-recette/update-recette.component";
+import {ShowRecetteComponent} from "./recette/show-recette/show-recette.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent  },
@@ -97,8 +101,13 @@ const routes: Routes = [
   { path: 'AdminRestaurantList', component: AdminRestaurantListComponent},
   { path: 'ResponsableRestaurant/:id', component: ResponsableRestaurantViewComponent },
   { path: 'GetRestaurantbyAdresse/:adresse', component: GetRestaurantbyAdresseComponent },
+
   { path: 'showAllRecettes', component: ShowAllRecetteComponent},
   { path: 'AdminRecetteList', component: AdminRecetteListeComponent},
+  { path: 'AjouterRecetteComponent', component: AjoutRecetteComponent },
+  { path: 'DeleteRecetteComponent/:id', component: DeleteRecetteComponent },
+  { path: 'UpdateRecetteComponent/:id', component: UpdateRecetteComponent },
+  { path: 'ShowRecetteComponent/:id', component: ShowRecetteComponent },
 
   { path: 'AjouterPlates', component: AjouterPlatesComponent },
   { path: 'DeletePlates/:id', component: DeletePlatesComponent },
