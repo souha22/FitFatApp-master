@@ -1739,9 +1739,14 @@ Footer
 */
 
 .footer {
-  background-color: var(--black3);
-  padding: 6rem 1rem;
-  line-height: 3rem;
+  background-image: linear-gradient(to left, rgba(126, 167, 168,0), rgb(142,238,5));color: #2dd209;
+  height:200px ;
+
+}
+.footerS {
+  background-image: linear-gradient(to left, rgba(126, 167, 168,0), rgb(142,238,5));color: #2dd209;
+
+
 }
 
 .footer-top__box span svg {

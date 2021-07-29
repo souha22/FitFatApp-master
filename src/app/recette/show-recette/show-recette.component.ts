@@ -29,5 +29,7 @@ export class ShowRecetteComponent implements OnInit {
       console.log(recetteData)
     });
   }
-
+  retour(){
+    this.router.navigateByUrl('/showAllRecettes');
+  }
 }
