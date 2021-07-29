@@ -52,11 +52,8 @@ export class ProductsService {
     return this.httpClient.get<Product>(productUrl);
   }
 
-  addProduct(Product: any) {
-    const headers = new HttpHeaders()
-      .append('Content-Type' , 'application/json');
-
-    return this.httpClient.post("http://127.0.0.1:8000/api/products", Product, { headers: headers });
+  ajouterProducts(Products:any) {
+    return this.httpClient.post(this.productUrl, Products, {responseType: 'json'});
   }
 
   updateProduct(productId, productBody): Observable<Product>{

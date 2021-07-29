@@ -40,7 +40,7 @@ export class AjouterRestaurantComponent implements OnInit {
     }
     this.restaurantService.ajouterRestaurant(addrestaurant).subscribe( data => {
         console.log(data);
-        this.router.navigate(['http://localhost:4200/showAllRestaurant']);
+        this.router.navigateByUrl('/showAllRestaurant');
       });
 }
   onFileSelected(event) {

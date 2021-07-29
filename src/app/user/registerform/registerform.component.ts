@@ -35,7 +35,7 @@ export class RegisterformComponent implements OnInit {
 
     this.userService.addUser(this.user).subscribe(
       data => {
-        alert('Welcome to fitfat');
+        alert('Welcome to My food');
         this.result = JSON.stringify(data);
         this.router.navigate(['/login']);
       }
