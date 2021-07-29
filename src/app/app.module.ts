@@ -73,6 +73,7 @@ import { AjoutRecetteComponent } from './recette/ajout-recette/ajout-recette.com
 import { DeleteRecetteComponent } from './recette/delete-recette/delete-recette.component';
 import { UpdateRecetteComponent } from './recette/update-recette/update-recette.component';
 import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 @NgModule({
@@ -145,7 +146,8 @@ import { ShowRecetteComponent } from './recette/show-recette/show-recette.compon
     MatButtonModule,
     MatTableModule,
     Ng2SearchPipeModule,
-    CKEditorModule
+    CKEditorModule,
+    FontAwesomeModule
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '' }],
   bootstrap: [AppComponent]

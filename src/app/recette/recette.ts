@@ -8,4 +8,5 @@ export class Recette {
   ing3: string;
   ing4: string;
   ing5: string;
+
 }

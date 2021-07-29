@@ -25,9 +25,11 @@ export class DeleteRecetteComponent implements OnInit {
       this.recettesService.deleteRecette(this.recetteId).subscribe(deleterecettedata => {{
         console.log('Deleted recette');
 
-        this.router.navigate(['http://localhost:4200/showAllRecette']);
+       // this.router.navigate(['http://localhost:4200/showAllRecette']);
       }})
     });
   }
-
+  retour(){
+    this.router.navigateByUrl('/AdminRecetteList');
+  }
 }

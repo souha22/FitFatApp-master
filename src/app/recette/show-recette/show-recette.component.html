@@ -1,20 +1,21 @@
-<p> Consulter les informations d'une recette </p>
 <div class="card-body">
   <div class="row Show">
-
+<div class="container">
     <div>  <div class="col text-center">
-      <p class="title">{{recetteDetails.libelle}}</p></div>
+      <p class="title" style="color: orangered">{{recetteDetails.libelle}}</p></div>
       <p>{{recetteDetails.description}}</p>
-      <span><b>{{recetteDetails.ing1}}</b></span>
-      <span><b>{{recetteDetails.ing2}}</b></span>
-      <span><b>{{recetteDetails.ing3}}</b></span>
-      <span><b>{{recetteDetails.ing4}}</b></span>
-      <span><b>{{recetteDetails.ing5}}</b></span>
+      <h3 style="color: green">Liste des ingrédients</h3>
+      <span><b>{{recetteDetails.ing1}}</b></span><br>
+      <span><b>{{recetteDetails.ing2}}</b></span><br>
+      <span><b>{{recetteDetails.ing3}}</b></span><br>
+      <span><b>{{recetteDetails.ing4}}</b></span><br>
+      <span><b>{{recetteDetails.ing5}}</b></span><br>
       <br>
 
       <div >
         <img src={{recetteDetails.image}} alt="rover" />
       </div>
     </div>
+  </div>
   </div>
 </div>

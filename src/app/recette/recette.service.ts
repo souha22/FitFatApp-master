@@ -38,8 +38,18 @@ export class RecetteService {
     const recetteurl = 'http://127.0.0.1:8000/api/recettes/' + recetteID;
     return this.httpClient.delete<Recette>(recetteurl); // return an observable
   }
-  getRecettebyIng1(ingRe): Observable<Recette[]>{
-    return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe}});
+  getRecettebyIng(ingRe1, ingRe2, ingRe3, ingRe4, ingReg5): Observable<Recette[]>{
+    if(ingRe1 != null && ingRe2 != null && ingRe3 != null && ingRe4 != null && ingReg5 != null)
+    return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe1,ing2: ingRe2, ing3: ingRe3, ing4: ingRe4, ing5: ingReg5}});
+    else if(ingRe1!= null && ingRe2 != null && ingRe3  != null && ingRe4 != null && ingReg5 == null)
+      return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe1,ing2: ingRe2, ing3: ingRe3, ing4: ingRe4}});
+    else if(ingRe1 != null && ingRe2 != null && ingRe3 != null && ingRe4 == null && ingReg5 == null)
+      return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe1,ing2: ingRe2, ing3: ingRe3}});
+    else if(ingRe1 != null && ingRe2 != null && ingRe3 == null && ingRe4 == null && ingReg5 == null)
+      return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe1,ing2: ingRe2}});
+    else if(ingRe1 != null && ingRe2 == null && ingRe3 == null && ingRe4 == null && ingReg5 == null)
+      return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe1}});
+
   }
   getRecettebyLibelle(libRe): Observable<Recette[]>{
     return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {libelle: libRe}});
