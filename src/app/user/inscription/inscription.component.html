@@ -1,0 +1,127 @@
+<!--
+
+
+&lt;!&ndash;<div class="container">
+<form [formGroup]="inscriform" (submit)="onSubmit();">
+    <fieldset class="row inscription">
+    <legend>Formulaire d'inscription</legend>
+      <div>
+        <tr>
+        <td><label>Nom</label></td>
+        <td>
+          <input formControlName="username" type="text" name="Username" placeholder="Veuillez saisir votre Nom" ngModel required >
+            <span *ngIf="inscriform.get('username').touched && inscriform.get('username').hasError('required')">SVP champs obligatoire!</span>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <label>Prenom</label>
+        </td>
+        <td>
+          <input formControlName="name" type="text" placeholder="saisir votre prenom"/>
+          <span *ngIf="inscriform.get('name').touched && inscriform.get('name').hasError('required')">SVP champs obligatoire!</span>
+
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <label>Email</label></td>
+          <td>
+            <input formControlName="email" type="email" placeholder="saisir votre Email"/>
+            <span *ngIf="inscriform.get('email').touched && inscriform.get('email').hasError('required')">SVP champs obligatoire!</span>
+            <span *ngIf="inscriform.get('email').touched && inscriform.get('email').hasError('email')">Email non valid!</span>
+
+          </td>
+        </tr>
+
+        <tr>
+    <td><label>Rôle</label></td>
+    <td>
+      <select formControlName="role"class="form-select" aria-label="Default select example">
+        <span *ngIf="inscriform.get('role').touched && inscriform.get('role').hasError('required')">SVP champs obligatoire!</span>
+        <option selected="selected">Votre Role </option>
+        <option value="1">ROLE_USER</option>
+        <option value="2">ROLE_REPRESANTANT_RESTAURANT</option>
+      </select>
+    </td>
+  </tr>
+        <tr>
+    <td><label>Mot de passe</label></td>
+    <td>
+      <input formControlName="password" type="password" placeholder="saisir votre Mot de passe"/>
+      <span *ngIf="inscriform.get('password').touched && inscriform.get('password').hasError('minlength')">Minimum 8 caractéres </span>
+
+    </td>
+  </tr>
+      </div>
+    <div>
+        <tr>
+          <td colspan="2">
+            <button class="btn btn-success" [disabled] = "!inscriform.valid">Inscrire</button>
+            <button class="btn btn-secondary " >Annuler</button>
+          </td>
+        </tr>
+        </div>
+  </fieldset>
+
+</form>
+</div>&ndash;&gt;
+
+<div class="container">
+
+  <h1 class="h1Style">Inscription</h1>
+
+  <form [formGroup]="inscriform" (submit)="onSubmit();">
+
+    <div  class="form-group">
+      <label for="username">Nom</label>
+      <input formControlName="username" class="form-control" type="text" id="username"  ngModel required>
+    </div>
+
+    <div  class="alert alert-danger" *ngIf="inscriform.get('username').touched && inscriform.get('username').hasError('required')">
+      Le champ Nom est obligatoire
+    </div>
+
+    <div  class="form-group" >
+      <label for="name">Prénom</label>
+      <input formControlName="name" class="form-control" type="text" id="name" ngModel required>
+    </div>
+    <div  class="alert alert-danger" *ngIf="inscriform.get('name').touched && inscriform.get('name').hasError('required')">
+      Le champ Prénom est obligatoire
+    </div>
+
+
+    <div  class="form-group">
+      <label for="email">Email</label>
+      <input formControlName="email" pattern="[a-zA-Z0-9]+@+[a-zA-Z0-9]+.[a-zA-Z0-9]{2,4}" class="form-control" type="text" id="email">
+    </div>
+
+    <div *ngIf="inscriform.get('email').touched && inscriform.get('email').hasError('required')" class="alert alert-danger" >
+      <div *ngIf="inscriform.get('email').hasError('required')">Champ Email est obligatoire</div>
+      <div *ngIf="inscriform.get('email').hasError('pattern')">Champ Email invalide</div>
+    </div>
+
+    <div  class="form-group">
+      <label for="role">Rôle</label>
+      <select  ngModel="s" formControlName="role" class="form-control" aria-label="Default select example">
+        <span *ngIf="inscriform.get('role').touched && inscriform.get('role').hasError('required')">SVP champs obligatoire!</span>
+        <option selected value="s">Votre Role </option>
+        <option value="1">ROLE_USER</option>
+        <option value="2">ROLE_REPRESANTANT_RESTAURANT</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mot De Passe</label>
+      <input type="password" id="password" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <button [disabled] = "!inscriform.valid" style="margin-right: 10px" type="submit" class="btn btn-primary">Inscrire</button>
+      <button type="reset" class="btn btn-secondary">Annuler</button>
+    </div>
+
+  </form>
+</div>
+
+-->

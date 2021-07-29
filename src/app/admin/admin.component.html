@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+
+      <meta charset="utf-8">
+      <title>Animated Sidebar Menu | CodingLab</title>
+      <link rel="stylesheet" href="admin.component.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="wrapper">
+         <input type="checkbox" id="btn" hidden>
+         <label for="btn" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         <i class="fas fa-times"></i>
+         </label>
+         <nav id="sidebar">
+            <!-- <div class="title">
+               Menu
+            </div> -->
+            <ul class="list-items">
+
+
+               <li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
+
+               <li><a routerLink="./ProductTable"><i class="fas fa-apple-alt"></i>Products</a></li>
+               <li><a routerLink="./CategoryTable"><i class="fas fa-table"></i>Categories</a></li>
+               <li><a href="./AdminPlatesList"><i class="fas fa-pizza-slice"></i>Plates</a></li>
+
+               <li><a href="./AdminRestaurantList"><i class="fas fa-user" ></i>Restaurants</a></li>
+              <li><a href="./AdminRecetteList"><i class="fas fa-user" ></i>Recette</a></li>
+               <li><a routerLink="./admin-blog"><i class="fa fa-book" ></i>Articles</a></li>
+               <li><a routerLink="./admin-comment"><i class="fa fa-book" ></i>Commentaires</a></li>
+               <br>
+               <li><a routerLink="./listusers"><i class="fas fa-user"></i>Users</a></li>
+
+
+            </ul>
+         </nav>
+      </div>
+
+
+
+   </body>
+</html>

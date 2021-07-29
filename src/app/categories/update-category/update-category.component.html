@@ -1,0 +1,15 @@
+
+<h2 class="bg-light mb-2">Update Category</h2>
+<form (submit)="updateCategory(updateCategoryForm)" #updateCategoryForm="ngForm" >
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+        <label for="validationServer02">nom</label>
+        <input type="text" class="form-control"  [(ngModel)]="CategoryDetails.nom" required name="nom" ngModel>
+      </div>
+    </div>
+
+      
+    <button class="btn btn-primary" type="submit">Update Category</button>
+</form>
+
+

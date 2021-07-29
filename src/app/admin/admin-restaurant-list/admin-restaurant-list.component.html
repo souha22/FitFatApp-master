@@ -1,0 +1,35 @@
+
+<p> Last Update : {{ lastUpdate | date: 'short'  }}</p>
+
+<div class="top-header">
+<li><a [routerLink]= "['/AjouterRestaurantComponent']"><i class="fa fa-plus" style="font-size:24px"> Add New Restaurant</i></a></li>
+</div>
+
+<table class="table table-bordered"   >
+  <thead>
+
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Description</th>
+    <th scope="col">Adresse</th>
+    <th scope="col">Telephone</th>
+    <th scope="col">image</th>
+    <th scope="col">Settings</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let restaurant of restaurantList">
+    <td>{{restaurant.id}}</td>
+    <td>{{restaurant.nom}}</td>
+    <td>{{restaurant.description}}</td>
+    <td>{{restaurant.adresse}}</td>
+    <td>{{restaurant.telephone}}</td>
+    <td>{{restaurant.image}}</td>
+    <td><li><a routerLink="/DeleteRestaurantComponent/{{restaurant.id}}"><i class="fa fa-trash"style="font-size:24px;color:red"></i></a></li>
+      <li><a routerLink="/UpdateRestaurantComponent/{{restaurant.id}}"><i class="fa fa-edit" style="font-size:24px"></i></a></li></td>
+
+  </tr>
+  </tbody>
+

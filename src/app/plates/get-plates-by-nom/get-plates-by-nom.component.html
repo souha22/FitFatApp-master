@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let plates of plateslist">
+    <div class="card h-100">
+      <a href="#"><img class="card-img-top" src="{{plates.nom}}" alt=""></a>
+      <div class="card-body">
+        <h2>{{ plates.id }}</h2>
+        <h3 class="card-title">
+          <a routerLink="GetPlatesBydes/{{plates.nom}}">{{ plates.nom }}</a>
+        </h3>
+        <p class="card-text">{{ plates.description}}</p>
+        <h4>prix : {{ plates.prix }}</h4>
+        <h5>{{ plates.Restaurant }}</h5>
+
+
+        <h6>{{ plates.image }}</h6>
+
+      </div>
+
+    </div>
+  </div>
+</div>

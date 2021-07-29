@@ -1,0 +1,55 @@
+
+<div class="new_arrivals">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="section_title new_arrivals_title">
+          <h2>FitFat Store</h2>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    *** vous pouvez Faire votre recherches içi ***
+    <br>
+    choisissez une recherche par nom ou par description
+
+    <nav class="navbar">
+      <input class="form-control" type="text" name="firstName" [(ngModel)]="nomm" (ngModelChange)="rechercher()"
+             placeholder="Entrez le nom du votre plat souhaitée" [ngStyle]="{'width' : '20%', 'transform': 'translate(-757px)'}" >
+    </nav>
+    <nav class="navbar">
+      <input class="form-control" type="text" name="secondname" [(ngModel)]="dess" (ngModelChange)="recherchere()"
+             placeholder="Entrez la description que vous voulez" [ngStyle]="{'width' : '20%', 'transform': 'translate(-757px)'}" >
+    </nav>
+    <br>
+
+    <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let plates of platesList">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="{{plates.nom}}" alt=""></a>
+            <div class="card-body">
+              <div class="col text-center">
+                <h2 class="card-title">
+                  {{ plates.nom }}
+                </h2>
+              </div>
+              <h4>{{ plates.description }}</h4>
+              <p class="card-text">{{ plates.Restaurant}}</p>
+              <h5>Prix en dt : {{ plates.prix }}</h5>
+              <p> <a [routerLink]= "['/ShowRestaurantComponent']" > <i class="fa fa-angle-double-right"></i> Voir plus</a>
+              </p>
+              <h6>    <div >
+                <img src={{plates.image}} alt="rover" />
+              </div></h6>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

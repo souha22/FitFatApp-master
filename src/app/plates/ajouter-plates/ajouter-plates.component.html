@@ -1,0 +1,39 @@
+<p>**** Vous pouvez ajouter un nouveau plat içi !! ****</p>
+<div class="container">
+  <h2 class="text-center">Add plate</h2>
+  <form #plat="ngForm" [formGroup]="addForm" (ngSubmit)="onSubmit(plat.value)">
+
+    <div class="form-group">
+      <label for="nom">Nom:</label>
+      <input type="text" formControlName="nom" placeholder="nom" name="nom" class="form-control" id="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="description">description:</label>
+      <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="prix">prix:</label>
+      <input type="number" formControlName="adresse" placeholder="prix" name="prix" class="form-control" id="prix">
+    </div>
+
+    <div class="form-group">
+      <label for="Restaurant">restaurant:</label>
+      <input type="number" formControlName="Restaurant" placeholder="Restaurant" name="Restaurant" class="form-control" id="Restaurant">
+    </div>
+    <form [formGroup]="uploadForm"  class="was-validated">
+      <div class="mb-3">
+        <label  class="form-label">Image d'un plat </label>
+
+        <input type="file" class="form-control" aria-label="file example" name ="image" (change)="onFileSelected($event)" #fileUpload>
+
+
+      </div>
+    </form>
+
+
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>

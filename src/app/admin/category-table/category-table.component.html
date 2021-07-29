@@ -1,0 +1,57 @@
+
+<p>Last Update : {{ lastUpdate | date: 'short'  }}</p>
+
+<!-- 
+
+<table class="table table-hover">
+  
+  <thead>
+      <tr>
+        
+          <th>Id</th>
+          <th>Nom</th>
+
+      </tr>
+  </thead>
+  <tbody>
+    
+      <tr *ngFor="let category of CategoryList">
+        
+          <td>{{category.id}}</td>
+          <td>{{category.nom}}</td>
+          <li><a routerLink="/category/addCategory"><i class="fas fa-plus" style="font-size:24px;color:green"></i></a></li>
+          <li><a routerLink="/category/delete-category/{{category.id}}"><i class="fa fa-trash"style="font-size:24px;color:red"></i></a></li>
+          <li><a routerLink="/category/update-category/{{category.id}}"><i class="fa fa-edit" style="font-size:24px"></i></a></li>
+          
+           <td><i class="fas fa-plus" style="font-size:24px;color:green"></i><i class="fa fa-edit" style="font-size:24px"></i> <i class="fa fa-trash"style="font-size:24px;color:red"></i></td> -->
+        
+      <!-- </tr>
+  
+  </tbody>
+</table>  -->
+
+
+
+<li><a routerLink="/category/addCategory"><i class="fa fa-plus" style="font-size:24px"> Add New Category</i></a></li>
+
+
+<table style="width:100%">
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Settings</th>
+
+    </tr>
+    <tr *ngFor="let category of CategoryList">
+
+        <td>{{category.id}}</td>
+        <td>{{category.nom}}</td>
+        <td><li><a routerLink="/category/delete-category/{{category.id}}"><i class="fa fa-trash"style="font-size:24px;color:red"></i></a></li>
+        <li><a routerLink="/category/update-category/{{category.id}}"><i class="fa fa-edit" style="font-size:24px"></i></a></li></td>
+
+    </tr>
+    
+  </table>
+
+  
+  

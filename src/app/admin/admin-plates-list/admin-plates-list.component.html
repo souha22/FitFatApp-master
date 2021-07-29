@@ -1,0 +1,35 @@
+
+
+
+
+<table class="table table-bordered"   >
+  <thead>
+
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Description</th>
+    <th scope="col">prix</th>
+    <th scope="col">Restaurant Id </th>
+    <th scope="col">image</th>
+    <th scope="col">Settings</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let plates of platesList">
+    <td>{{plates.id}}</td>
+    <td>{{plates.nom}}</td>
+    <td>{{plates.description}}</td>
+    <td>{{plates.prix}}</td>
+    <td>{{plates.Restaurant}}</td>
+    <td>{{plates.image}}</td>
+    <td><li><a routerLink="/UpdatePlate/{{plates.id}}"><i class="fa fa-trash"style="font-size:24px;color:red"></i></a></li>
+      <li><a routerLink="/UpdatePlate/{{plates.id}}"><i class="fa fa-edit" style="font-size:24px"></i></a></li></td>
+
+  </tr>
+  </tbody>
+
+</table>
+
+

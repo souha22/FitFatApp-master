@@ -1,0 +1,45 @@
+<div class="container">
+<h2 style="text-align: center;margin-bottom: 1.2em; margin-top: 1em;" >Update USer</h2>
+
+<form (submit)="updateUser(updateUserForm)" #updateUserForm="ngForm">
+
+    <div class="form-row">
+      <div class="col">
+        <label>Name</label>
+        <input type="text" class="form-control" required name="name" disabled [(ngModel)]="userDetails.name" ngModel >
+      </div>
+      <div class="col">
+        <label>LastName</label>
+        <input type="text" class="form-control" [(ngModel)]="userDetails.lastname" disabled required name="lastname" ngModel  >
+      </div>
+    </div>
+
+
+  <div style="margin-bottom: 20px; margin-top: 20px;" class="form-row">
+    <div class="col">
+      <label>E-mail</label>
+      <input type="text" class="form-control" [(ngModel)]="userDetails.email" disabled required name="email" ngMode >
+    </div>
+    <div class="col">
+      <label>Adress</label>
+      <input type="text" class="form-control" [(ngModel)]="userDetails.adress" disabled required name="Adress" ngModel>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label>Role</label><br>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" [checked]="userDetails.roles.includes('UR')"  type="radio" name="roleUser" id="r1">
+      <label class="form-check-label" for="r1">User</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input"  type="radio" name="roleUser" [checked]="userDetails.roles.includes('RR')" id="r2" value="xx">
+      <label class="form-check-label" for="r2">Restaurant Manager</label>
+    </div>
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Update User</button>
+</form>
+</div>

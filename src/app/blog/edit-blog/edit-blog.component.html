@@ -1,0 +1,29 @@
+<div class="edit-blog">
+  <form #blogform="ngForm">
+    <div class="form-group">
+      <label>Title</label> *
+      <input class="form-control" type="text" name="title" [(ngModel)]="blog.title"  ngModel readonly>
+    </div>
+
+    <div class="form-group">
+      <label>Text</label>
+      <textarea class="form-control" name="content" rows="5" cols="50" ngModel [(ngModel)]="blog.content" readonly></textarea>
+    </div>
+    <div class="form-group">
+      <label>Email</label> *
+      <input class="form-control" type="text" name="createdBy" [(ngModel)]="blog.createdBy" readonly ngModel>
+    </div>
+    <div class="form-group">
+      <label>Publique</label> *
+      <input class="form-control" type="text" name="publique" placeholder="Veuillez saisir 'yes' pour que cet article devient publique" [(ngModel)]="blog.publique" ngModel required #publique="ngModel">
+    </div>
+    <div *ngIf="publique.invalid && publique.touched">
+      <div class="alert alert-danger" role="alert">
+        Merci de remplir ce champs!
+      </div>
+    </div>
+    <button [disabled] = "blogform.invalid" (click)="edit(blogform.value)">Modifier</button>
+    <p class="message-user">{{messageUser}}</p>
+  </form>
+
+</div>

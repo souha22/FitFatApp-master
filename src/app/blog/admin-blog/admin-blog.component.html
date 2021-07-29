@@ -1,0 +1,33 @@
+
+<div class="adminBlog">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Titre d el'article</th>
+      <th scope="col">Text</th>
+      <th scope="col">Créateur de l'article</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let blog of listeBlogs">
+      <td>{{blog.title}}</td>
+      <td>{{blog.content | slice:0:50 }}  ....</td>
+      <td>{{blog.createdBy}}</td>
+      <td>
+        <p *ngIf="blog.publique == 'yes'">Accepté</p>
+        <p *ngIf="blog.publique == ''">en attente</p>
+      </td>
+      <td>
+
+        <a [routerLink]= "['/edit-blog/', blog.id]" ><i class="fa fa-edit">edit</i></a>
+        <div></div>
+        <a [routerLink]= "['/delete-blog/', blog.id]" > <i class="fa fa-trash">delete</i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

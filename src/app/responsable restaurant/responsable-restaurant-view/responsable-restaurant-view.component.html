@@ -1,0 +1,25 @@
+<div class="row Show">
+  <div class="top-header">
+    <li><a [routerLink]= "['/AjouterPlates']"><i class="fa fa-plus" style="font-size:24px"> Add New plate</i></a></li>
+  </div>
+
+  <div *ngFor="let resto of restaurant">
+    <div>
+      <p class="title">{{resto.nom}}</p>
+      <p>
+      </p>
+      <p>{{resto.description}}
+      <p>{{resto.adresse}}
+      </p>
+      <span><b>Crée par :</b> {{resto.telephone}}</span>
+
+      <div >
+        <img src={{resto.image}} alt="rover" />
+      </div>
+    </div>
+    <p> <a [routerLink]= "['/showAllPlates']" > <i class="fa fa-angle-double-right"></i> Voir plus</a>
+    </p>
+
+  </div>
+</div>
+

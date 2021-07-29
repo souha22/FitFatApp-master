@@ -1,0 +1,39 @@
+<p>**** vous etes sur de modifier ces informations? **** </p>
+<div class="form-group">
+  <h2 class="bg-light mb-2">Update Plate</h2>
+  <form (submit)="updateplates(updateplatesForm)" #updateplatesForm="ngForm" >
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Plate id</label>
+        <input type="number" class="form-control" hidden  [(ngModel)]="platesDetails.id" required name="id" ngModel>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Plate Name</label>
+        <input type="text" class="form-control"   [(ngModel)]="platesDetails.nom" required name="nom" ngModel>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 mb-3">
+      <label>Description</label>
+      <input type="text" class="form-control"  [(ngModel)]="platesDetails.description" required name="description" ngModel>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label>Prix: </label>
+      <input type="number" class="form-control"  [(ngModel)]="platesDetails.prix" required name="prix" ngModel>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Restaurant adéquat</label>
+        <textarea type="text" class="form-control" hidden [(ngModel)]="platesDetails.Restaurant"  required name="Restaurant" ngModel >
+          </textarea>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" (click)="updateplates(updateplatesForm.value)">Update Plate</button>
+  </form>
+</div>

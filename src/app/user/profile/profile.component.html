@@ -1,0 +1,57 @@
+<!--
+<div>
+
+  <li><a routerLink="./updateuser"><i class="fa fa-edit"></i>Modifier mes données</a></li>
+  <li><a routerLink="./deleteuser"><i class="fa fa-trash" ></i>Supprimer mon compte</a></li>
+
+</div>
+-->
+
+<div class="container">
+  <h2 style="text-align: center;margin-bottom: 1.2em; margin-top: 1em;" >Update USer</h2>
+
+  <form #updateUserForm="ngForm">
+
+    <div class="form-row">
+      <div class="col">
+        <label>Name</label>
+        <input type="text" class="form-control" required name="name"  [(ngModel)]="userDetails.name" ngModel >
+      </div>
+      <div class="col">
+        <label>LastName</label>
+        <input type="text" class="form-control" [(ngModel)]="userDetails.lastname"  required name="lastname" ngModel  >
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px;" class="form-row">
+      <div class="col">
+        <label>E-mail</label>
+        <input type="text" class="form-control" [(ngModel)]="userDetails.email"  required name="email" ngMode >
+      </div>
+      <div class="col">
+        <label>Adress</label>
+        <input type="text" class="form-control" [(ngModel)]="userDetails.adress"  required name="Adress" ngModel>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label>Role</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" disabled [checked]="userDetails.roles.includes('UR')"  type="radio" name="roleUser" id="r1">
+        <label class="form-check-label" for="r1">User</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" disabled  type="radio" name="roleUser" [checked]="userDetails.roles.includes('RR')" id="r2" value="xx">
+        <label class="form-check-label" for="r2">Restaurant Manager</label>
+      </div>
+    </div>
+
+
+    <button (click)="updateUser()" class="btn btn-primary" type="submit">Update</button><br><br>
+    <button  (click)="deleteMyAccount()" class="btn btn-danger float-right" type="submit">Delete My Account</button>
+<!--
+    routerLink="/user/deleteuser/{{userDetails.id}}"
+-->
+  </form>
+</div>

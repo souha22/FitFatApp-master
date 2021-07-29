@@ -1,0 +1,39 @@
+<p>**** Vous pouvez ajouter un nouveau branch d'un restaurant içi !! ****</p>
+<div class="container">
+  <h2 class="text-center">Add Restaurant's Branch</h2>
+  <form #Restaurant="ngForm" [formGroup]="addForm" (ngSubmit)="onSubmit(Restaurant.value)">
+
+    <div class="form-group">
+      <label for="nom">Nom:</label>
+      <input type="text" formControlName="nom" placeholder="nom" name="nom" class="form-control" id="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="description">description:</label>
+      <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="adresse">adresse:</label>
+      <input type="text" formControlName="adresse" placeholder="adresse" name="adresse" class="form-control" id="adresse">
+    </div>
+
+    <div class="form-group">
+      <label for="telephone">telephone:</label>
+      <input type="number" formControlName="telephone" placeholder="telephone" name="telephone" class="form-control" id="telephone">
+    </div>
+    <form [formGroup]="uploadForm"  class="was-validated">
+      <div class="mb-3">
+        <label  class="form-label">Image du Restaurant</label>
+
+        <input type="file" class="form-control" aria-label="file example" name ="image" (change)="onFileSelected($event)" #fileUpload>
+
+
+      </div>
+    </form>
+
+
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>

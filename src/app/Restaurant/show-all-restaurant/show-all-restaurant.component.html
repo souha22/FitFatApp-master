@@ -1,0 +1,64 @@
+
+<div class="new_arrivals">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="section_title new_arrivals_title">
+          <h2>FitFat Store</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col text-center">
+        <div class="new_arrivals_sorting">
+
+        </div>
+      </div>
+    </div>
+
+
+<br>
+*** vous pouvez Faire votre recherches içi ***
+    <br>
+    choisissez une recherche par nom ou par adresse
+
+    <nav class="navbar">
+      <input class="form-control" type="text" name="firstName" [(ngModel)]="nomm" (ngModelChange)="rechercher()"
+             placeholder="Entrez le nom du restaurant souhaitée" [ngStyle]="{'width' : '20%', 'transform': 'translate(-757px)'}" >
+    </nav>
+    <nav class="navbar">
+      <input class="form-control" type="text" name="secondname" [(ngModel)]="adressse" (ngModelChange)="recherchere()"
+             placeholder="Entrez l'adresse que vous voulez" [ngStyle]="{'width' : '20%', 'transform': 'translate(-757px)'}" >
+    </nav>
+    <br>
+
+    <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let restaurant of restaurantList">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="{{restaurant.nom}}" alt=""></a>
+            <div class="card-body">
+              <div class="col text-center">
+              <h2 class="card-title">
+                {{ restaurant.nom }}
+              </h2>
+              </div>
+              <h4>{{ restaurant.description }}</h4>
+              <p class="card-text">{{ restaurant.adresse}}</p>
+              <h5>Numéro de telephone:  {{ restaurant.telephone }}</h5>
+              <p> <a [routerLink]= "['/ShowRestaurantComponent/', restaurant.id]" > <i class="fa fa-angle-double-right"></i> Voir plus</a>
+              </p>
+              <h6>    <div >
+                <img src={{restaurant.image}} alt="rover" />
+              </div></h6>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,70 @@
+{
+    "products": [
+        {
+            "@id": "/api/products/1",
+            "@type": "Product",
+            "id": 1,
+            "nom": "nutella",
+            "description": "healthy nutella with honey",
+            "prix": 7000,
+            "Category": "/api/categories/2"
+          },
+          {
+            "@id": "/api/products/2",
+            "@type": "Product",
+            "id": 2,
+            "nom": "almond milk",
+            "description": "a natural almond milk",
+            "prix": 15000
+          },
+          {
+            "@id": "/api/products/5",
+            "@type": "Product",
+            "id": 5,
+            "nom": "penaut butter",
+            "description": "a sugar less penaut butter",
+            "prix": 3000
+          },
+          {
+            "@id": "/api/products/6",
+            "@type": "Product",
+            "id": 6,
+            "nom": "bsisa",
+            "description": "healthy bsissa",
+            "prix": 1000,
+            "Category": "/api/categories/2"
+          },
+          {
+            "@id": "/api/products/8",
+            "@type": "Product",
+            "id": 8,
+            "nom": "smth22",
+            "description": "sssss",
+            "prix": 2000,
+            "Category": "/api/categories/1"
+          }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "categoryName": "Polo Tshirts"
+      },
+      {
+        "id": 2,
+        "categoryName": "Casual TShirts"
+      },
+      {
+        "id": 3,
+        "categoryName": "Soccer Tshirts"
+      },
+      {
+        "id": 4,
+        "categoryName": "Shirts"
+      },
+      {
+        "id": 5,
+        "categoryName": "Shoes"
+      }
+    ]
+    
+  }

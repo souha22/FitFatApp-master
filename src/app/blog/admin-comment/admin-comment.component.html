@@ -1,0 +1,26 @@
+<div class="adminComment">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Commentaire</th>
+      <th scope="col">Date publication</th>
+      <th scope="col">Blogs</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let comment of listeComment">
+      <td>{{comment.message}}</td>
+      <td>{{comment.DatePublication}}</td>
+      <td>{{comment.blogs}}</td>
+
+
+      <td>
+        <a [routerLink]= "['/delete-comment/', comment.id]" > <i class="fa fa-trash">delete</i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
