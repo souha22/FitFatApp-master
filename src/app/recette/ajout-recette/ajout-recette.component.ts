@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import {RecetteService} from "../recette.service";
 
 @Component({
@@ -21,17 +21,19 @@ export class AjoutRecetteComponent implements OnInit {
     });
     this.addForm = this.formBuilder.group({
       //id: [],
-      nom: ['', Validators.required],
+      libelle: ['', Validators.required],
       description: ['', Validators.required],
-      adresse: ['', Validators.required],
-      telephone: [, Validators.required],
-
+      ing1: [],
+      ing2: [],
+      ing3: [],
+      ing4: [],
+      ing5: []
 
     });
   }
   onSubmit(form:any) {
     let addrecette = {
-      libelle : form.lib,
+      libelle : form.libelle,
       description : form.description,
       ing1 : form.ing1,
       ing2 : form.ing2,
@@ -42,7 +44,8 @@ export class AjoutRecetteComponent implements OnInit {
     }
     this.recetteService.ajouterRecette(addrecette).subscribe( data => {
       console.log(data);
-      this.router.navigate(['http://localhost:4200/showAllRecette']);
+     // this.router.navigate(['http://localhost:4200/showAllRecettes']);
+      this.router.navigateByUrl('/showAllRecettes');
     });
   }
   onFileSelected(event) {

@@ -38,10 +38,10 @@ export class RecetteService {
     const recetteurl = 'http://127.0.0.1:8000/api/recettes/' + recetteID;
     return this.httpClient.delete<Recette>(recetteurl); // return an observable
   }
-  getRecettebyAdresse(adresseRe): Observable<Recette[]>{
-    return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {adresse: adresseRe}});
+  getRecettebyIng1(ingRe): Observable<Recette[]>{
+    return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {ing1: ingRe}});
   }
-  getRecettebyLib(libRe): Observable<Recette[]>{
+  getRecettebyLibelle(libRe): Observable<Recette[]>{
     return this.httpClient.get<Recette[]>('http://127.0.0.1:8000/api/recettes'  , { params: {libelle: libRe}});
   }
   uploadImageService(imageBody)

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isConnected: boolean = false;
-  title = 'FitFatApp';
+  title = 'MyFood';
 
 }

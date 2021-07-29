@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Recette} from "../../Recette/recette";
-import {RecetteService} from "../../Recette/recette.service";
-import {Router} from "@angular/router";
+import {Recette} from "../recette";
+import {RecetteService} from '../recette.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-show-all-recette',
@@ -10,10 +10,13 @@ import {Router} from "@angular/router";
 })
 export class ShowAllRecetteComponent implements OnInit {
 
-  libelle;
-  ing1;
+  libellee;
+  ing11;
+  ing22;
+  ing33;
+  ing44;
+  ing55;
   recetteList: Recette[]=[] ;
-  //restoId = 0;
   constructor(private recetteService: RecetteService, private router:Router) { }
 
   ngOnInit(): void  {
@@ -26,22 +29,14 @@ export class ShowAllRecetteComponent implements OnInit {
 
   }
   rechercher(){
-    /* if (this.title == ""){
-       this.ngOnInit();
-     } else {
-       this.listeBlogs = this.listeBlogs.filter(res => {
-         return res.title.toLocaleLowerCase().match(this.title.toLocaleLowerCase());
-       });
-     }*/
-    this.recetteService.getRecettebyLib(this.libelle).subscribe( data =>
-    { this.recetteList = data['hydra:member'];
-
+     this.recetteService.getRecettebyLibelle(this.libellee).subscribe( data =>
+   { this.recetteList = data['hydra:member'];
     });
 
 
   }
   recherchere() {
-    this.recetteService.getRecettebyAdresse(this.ing1).subscribe( data =>
+    this.recetteService.getRecettebyIng1(this.ing11).subscribe( data =>
     { this.recetteList = data['hydra:member'];
 
     });
