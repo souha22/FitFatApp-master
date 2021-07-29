@@ -1,9 +1,9 @@
 <div class="small-container cart-page">
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
+    <table class="table table-bordered" >
+        <tr style="background-color: orange">
+            <th  scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
         </tr>
         <tr *ngFor="let cartItem of productService.shoppingCart|keyvalue">
             <td>
@@ -21,15 +21,12 @@
            <td><input type="number" value="{{cartItem.value[1]}}"></td>
 
            <td>{{cartItem.value[0].prix}} TND</td>
-
-<!--
-            <td>Tolal</td>
-            {{cartItem.value[0].prix*cartItem.value[1]}}
-             -->
         </tr>
 
 
     </table>
+
+  <br><br><br>
     <div class="total-price">
         <table>
 
